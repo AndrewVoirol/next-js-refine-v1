@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# next-js-app-template
 
-## Getting Started
+![Next.js Logo](https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg#animated)
 
-First, run the development server:
+> ⚡ A highly composable, fully-featured Next.js 15 app template with TypeScript, TailwindCSS 4, ShadCN UI, and full modern tooling.
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/demo-live-green)](https://next-js-app-template.vercel.app)
+[![Framework](https://img.shields.io/badge/Next.js-15.3.1-black?logo=next.js)](https://nextjs.org)
+
+---
+
+## ✨ Features
+
+- ✅ Next.js 15 (App Router, Server Actions)
+- 🎨 Tailwind CSS 4 + `tailwind-merge` and `clsx`
+- 🧩 ShadCN UI (radix-powered components)
+- 🌀 Framer Motion animations
+- 🔐 TypeScript 5.8 for strong typing
+- ⚙️ ESLint, Prettier, and Stylelint configured
+- 🌐 SEO-ready Head, optimized fonts, and structured layout
+- 🪝 Zustand state management
+
+---
+
+## 📦 Tech Stack
+
+| Technology         | Version    | Purpose                                |
+|-------------------|------------|----------------------------------------|
+| Next.js           | 15.3.1     | React Framework w/ SSR, ISR, etc.     |
+| React             | 19.1.0     | Core UI rendering engine               |
+| TypeScript        | 5.8.3      | Static typing                          |
+| TailwindCSS       | 4.1.4      | Utility-first CSS                      |
+| ShadCN UI         | latest     | Component system w/ Radix Primitives  |
+| Zustand           | 5.0.3      | Global state management                |
+| Lucide-react      | 0.503.0    | Icon system                            |
+| Framer Motion     | 12.7.4     | Animation library                      |
+| ESLint / Prettier | latest     | Code linting + formatting              |
+
+---
+
+## 🚀 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) and start hacking.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 File Structure Overview
 
-## Learn More
+```sh
+.
+├── app/              # App Router directory
+│   └── layout.tsx    # Root layout with providers
+│   └── page.tsx      # Home page
+├── components/       # Reusable UI components
+├── lib/              # Utility functions and hooks
+├── public/           # Static assets
+├── styles/           # Tailwind base styles
+└── tsconfig.json     # TypeScript config
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📐 Visual Layout Diagram
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```txt
+┌─────────────────────────────────────┐
+│          App Shell (Layout)        │
+│ ┌────────────┐  ┌────────────────┐ │
+│ │ Navigation │  │     Page       │ │
+│ │  (Header)  │  │    Content     │ │
+│ └────────────┘  └────────────────┘ │
+│        Footer (if applicable)      │
+└─────────────────────────────────────┘
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧪 Lint & Format
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm lint
+pnpm format
+```
+
+---
+
+## 📤 Deployment
+
+This template is optimized for deployment on [Vercel](https://vercel.com).
+
+---
+
+## 🙌 Credits
+
+- [ShadCN UI](https://ui.shadcn.com/)
+- [Vercel](https://vercel.com)
+- [Lucide Icons](https://lucide.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+## 📝 License
+
+MIT © [Andrew Voirol](https://github.com/AndrewVoirol)
+
