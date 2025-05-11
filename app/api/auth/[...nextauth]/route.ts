@@ -2,10 +2,10 @@ import NextAuth from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import type { AuthOptions } from "next-auth";
+import type { AuthConfig } from "next-auth";
 import { prisma } from "@/lib/prisma";
 
-export const authOptions: AuthOptions = {
+export const authConfig = {
   adapter: PrismaAdapter(prisma),
   providers: [
     GitHubProvider({
@@ -20,9 +20,9 @@ export const authOptions: AuthOptions = {
   pages: {
     signIn: "/signin",
   },
-  session: { strategy: 'jwt' as const },
+  session: { strategy: 'jwt' },
   secret: process.env.NEXTAUTH_SECRET,
-};
+} satisfies AuthConfig;
 
-const handler = NextAuth(authOptions);
+const handler = NextAuth(authConfig);
 export { handler as GET, handler as POST };
