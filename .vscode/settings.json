@@ -1,0 +1,31 @@
+{
+  "css.validate": false,
+  "stylelint.validate": ["css", "postcss"],
+  "stylelint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "css"],
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "tailwindCSS.lint.invalidConfigPath": "off",
+  "tailwindCSS.lint.invalidApply": "off",
+  "tailwindCSS.lint.invalidScreen": "off",
+  "tailwindCSS.lint.invalidVariant": "off",
+  "tailwindCSS.lint.invalidTailwindDirective": "off",
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "stylelint.config": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-tailwindcss"
+    ],
+    "rules": {
+      "at-rule-no-unknown": [true, {
+        "ignoreAtRules": ["tailwind", "apply", "layer", "variants", "responsive", "screen"]
+      }]
+    }
+  }
+}
